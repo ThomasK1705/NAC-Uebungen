@@ -13,25 +13,34 @@ Vektor2D::Vektor2D(void)
 Vektor2D::Vektor2D(int xeingabe, int yeingabe)
 	: xcord(xeingabe), ycord(yeingabe)
 {
-	cout << "Nicht der Standardkonsturktor von Vektor wurde aufgerunfen." << endl;
-}
-
-void Vektor2D :: setX(int x){
-	xcord = x;
-}
-
-void Vektor2D :: setY(int y){
-	ycord = y;
+	m_Element[0]=xcord;
+	m_Element[1]=ycord;
+	cout << "Nicht der Standardkonsturktor von Vektor2D wurde aufgerufen." << endl;
 }
 
 void Vektor2D:: addiere(Vektor2D v){
 
 	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
 		{
-			m_Element[i] = v.m_Element[i]+m_Element[i];
+			m_Element[i] = v.m_Element[i] + m_Element[i];
 		}
-	cout << "Summer des Vektors addiert mit Eingabevektor:" << endl;
+	cout << "Summe des Vektors addiert mit Eingabevektor:" << endl;
 	ausgabe();
+}
+
+void Vektor2D::kopiereIn(Vektor2D zielvar){
+	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
+		{
+			zielvar.m_Element[i] = m_Element[i]; 
+		}
+	ausgabe();
+}
+
+void tausche(Vektor2D a,Vektor2D b){
+	Vektor2D temp = a;
+	b.kopiereIn(a);
+	b = temp;
+
 }
 
 

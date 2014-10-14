@@ -1,4 +1,5 @@
-#pragma once // Durch headerguard ersetzen
+#ifndef MATRIX_H
+#define MATRIX_H
 class Matrix
 {
 protected:
@@ -13,3 +14,4 @@ public:
 	virtual ~Matrix(void);
 };
 
+#endif /* MATRIX_H */

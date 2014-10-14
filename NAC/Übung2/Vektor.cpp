@@ -13,15 +13,13 @@ Vektor::Vektor(void)
 
 
 void Vektor::betrag(void){
-	double a = 0;
-	double b = 1;
+	double betrag = 0;
 	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
 	{
-		a = m_Element[i]*m_Element[i];
-		b = b*a;
+		betrag = betrag + m_Element[i]*m_Element[i];
 	}
-	b = sqrt(b);
-	cout << "Betrag des Vektors: " << b << endl;
+	betrag = sqrt(betrag);
+	cout << "Betrag des Vektors: " << betrag << endl;
 }
 
 Vektor::~Vektor(void)

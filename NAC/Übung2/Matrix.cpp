@@ -11,14 +11,16 @@ Matrix::Matrix(void)
 		m_Element[i]=2;
 	}
 
-	cout << "Standardkonstruktor von Matrix wurde aufgerufen." <<std::endl;
+	cout << "Standardkonstruktor von Matrix wurde aufgerufen." << endl;
 }
 void Matrix::ausgabe(void)
 {
+	cout << "Matrix: (";
 	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
 	{
-		cout << m_Element[i];
+		cout << "|" << m_Element[i] << "|";
 	}
+	cout << ")" << endl;
 }
 
 
@@ -26,4 +28,6 @@ void Matrix::ausgabe(void)
 
 Matrix::~Matrix(void)
 {
+	ausgabe();
+	cout << "wird zerstoert" << endl;
 }
