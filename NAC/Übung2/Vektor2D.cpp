@@ -38,9 +38,11 @@ void Vektor2D::kopiereIn(Vektor2D zielvar){
 
 void tausche(Vektor2D a,Vektor2D b){
 	Vektor2D temp = a;
+	cout << "Ausgabe zweiter Vektor" << endl;
 	b.kopiereIn(a);
 	b = temp;
-
+	cout << "Ausgabe erster Vektor" << endl;
+	a.ausgabe();
 }
 
 
