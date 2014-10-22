@@ -10,6 +10,7 @@ protected:
 public:
 	Vektor2D(void);
 	Vektor2D(int, int);
+	void ausgabe();
 	void addiere(Vektor2D v);
 	void kopiereIn(Vektor2D zielvar);
 	virtual ~Vektor2D(void);

@@ -18,6 +18,12 @@ Vektor2D::Vektor2D(int xeingabe, int yeingabe)
 	cout << "Nicht der Standardkonsturktor von Vektor2D wurde aufgerufen." << endl;
 }
 
+void Vektor2D::ausgabe(void)
+{
+	cout << "Vektor2D:";
+	Matrix::ausgabe();
+}
+
 void Vektor2D:: addiere(Vektor2D v){
 
 	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
