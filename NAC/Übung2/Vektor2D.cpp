@@ -10,7 +10,7 @@ Vektor2D::Vektor2D(void)
 }
 
 
-Vektor2D::Vektor2D(int xeingabe, int yeingabe)
+Vektor2D::Vektor2D(float xeingabe, float yeingabe)
 	: xcord(xeingabe), ycord(yeingabe)
 {
 	m_Element[0]=xcord;

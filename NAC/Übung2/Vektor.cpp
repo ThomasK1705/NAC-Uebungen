@@ -1,7 +1,12 @@
 #include "Vektor.h"
 #include <iostream>
 #include <math.h>
+#include <limits.h>
 using namespace std;
+
+#ifndef PI
+#define PI 3.141593
+#endif /* PI */
 
 
 Vektor::Vektor(void)
@@ -18,8 +23,43 @@ void Vektor::betrag(void){
 	{
 		betrag = betrag + m_Element[i]*m_Element[i];
 	}
+	//TODO: Wie kann ich ein Objekt selbst rufen?
+	//betrag = skalarprodukt(this);
 	betrag = sqrt(betrag);
 	cout << "Betrag des Vektors: " << betrag << endl;
+}
+
+int Vektor::getDimension(){
+	return m_Zeilen;
+}
+
+float Vektor::skalarprodukt(Vektor v){
+	if (getDimension()==v.getDimension()){
+		float s = 0;
+		for(int i=0; i<(m_Zeilen*m_Spalten); i++)
+		{
+			s = s + m_Element[i]*v.m_Element[i];
+		}
+		cout << "Skalarprodukt der Vektoren: " << s << endl;
+		return s;
+	}
+	else {
+		cout << "Dimensionen der Vektoren ungleich" << endl;
+		return numeric_limits<float>::quiet_NaN();
+	}
+}
+
+float Vektor::winkel(Vektor v){
+	if (getDimension()==v.getDimension()){
+		float w = 0;
+		// Winkel = Skalarprodukt/(betrag(a)*betra(b))
+		w = (w * 180)/PI;
+		return w;
+	}
+	else {
+		cout << "Dimensionen der Vektoren ungleich" << endl;
+		return numeric_limits<float>::quiet_NaN();
+	}
 }
 
 Vektor::~Vektor(void)

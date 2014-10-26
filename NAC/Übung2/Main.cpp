@@ -41,11 +41,11 @@ int main(int argc, char* argv[])
 	//cout << "Loesche w vom heap" << endl;
 	//delete(w);
 
-	Vektor2D v(1,2), w(3,4);
-	Matrix M;
-	Matrix* Mpointer;
+	//Vektor2D v(1,2), w(3,4);
+	//Matrix M;
+	//Matrix* Mpointer;
 
-	M = v;
+	/*M = v;
 	Mpointer = &v;
 
 	cout << "Ausgabe von M und mit Mpointer" << endl;
@@ -58,8 +58,20 @@ int main(int argc, char* argv[])
 
 	cout << "Ausgabe von M/Mpointer nach Addition" << endl;
 	M.ausgabe();
-	Mpointer->ausgabe();
+	Mpointer->ausgabe(); */
 
+	//v.skalarprodukt(w);
+
+	Vektor2D vek[3];
+
+	Vektor2D** varr = new Vektor2D*[2];
+	varr[0] = new Vektor2D(2,3);
+	varr[1] = new Vektor2D(-2,1);
+	varr[0]->addiere(*varr[1]);
+
+	delete(varr[0]);
+	delete(varr[1]);
+	delete(varr);
 }
 	Matrix::getCounter();
 

@@ -4,12 +4,12 @@ class Vektor2D :
 	public Vektor
 {
 protected:
-	int xcord;
-	int ycord;
+	float xcord;
+	float ycord;
 
 public:
 	Vektor2D(void);
-	Vektor2D(int, int);
+	Vektor2D(float, float);
 	void ausgabe();
 	void addiere(Vektor2D v);
 	void kopiereIn(Vektor2D zielvar);
