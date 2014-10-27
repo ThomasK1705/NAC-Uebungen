@@ -15,18 +15,16 @@ Vektor::Vektor(void)
 	cout << "Standardkonstruktor von Vektor wurde aufgerufen." << endl;
 }
 
-
-
-void Vektor::betrag(void){
+float Vektor::betrag(void){
 	double betrag = 0;
-	for(int i=0; i<(m_Zeilen*m_Spalten); i++)
+	/*for(int i=0; i<(m_Zeilen*m_Spalten); i++)
 	{
 		betrag = betrag + m_Element[i]*m_Element[i];
-	}
-	//TODO: Wie kann ich ein Objekt selbst rufen?
-	//betrag = skalarprodukt(this);
+	}*/
+	betrag = skalarprodukt(*this);
 	betrag = sqrt(betrag);
-	cout << "Betrag des Vektors: " << betrag << endl;
+	//cout << "Betrag des Vektors: " << betrag << endl;
+	return betrag;
 }
 
 int Vektor::getDimension(){
@@ -40,7 +38,7 @@ float Vektor::skalarprodukt(Vektor v){
 		{
 			s = s + m_Element[i]*v.m_Element[i];
 		}
-		cout << "Skalarprodukt der Vektoren: " << s << endl;
+		//cout << "Skalarprodukt der Vektoren: " << s << endl;
 		return s;
 	}
 	else {
@@ -52,8 +50,10 @@ float Vektor::skalarprodukt(Vektor v){
 float Vektor::winkel(Vektor v){
 	if (getDimension()==v.getDimension()){
 		float w = 0;
-		// Winkel = Skalarprodukt/(betrag(a)*betra(b))
-		w = (w * 180)/PI;
+		// Winkel = Skalarprodukt/(betrag(a)*betrag(b))
+		w = skalarprodukt(v) / (v.betrag() * this->betrag());
+		//w = (360/(2*PI)) * w;
+		cout << "Winkel zwischen den Vektoren: " << w << " Grad" << endl;
 		return w;
 	}
 	else {

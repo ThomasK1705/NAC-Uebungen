@@ -6,7 +6,7 @@ class Vektor :
 {
 public:
 	Vektor(void);
-	void betrag();
+	float betrag();
 	int getDimension();
 	float skalarprodukt(Vektor v);
 	float winkel(Vektor v);

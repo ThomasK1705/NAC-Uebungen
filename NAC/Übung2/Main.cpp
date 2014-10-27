@@ -62,6 +62,11 @@ int main(int argc, char* argv[])
 
 	//v.skalarprodukt(w);
 
+	Vektor2D a(1,1);
+	Vektor2D b(-5,0);
+	
+	a.winkel(b);
+
 	Vektor2D vek[3];
 
 	Vektor2D** varr = new Vektor2D*[2];
