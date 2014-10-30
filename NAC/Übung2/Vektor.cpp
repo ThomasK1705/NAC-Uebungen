@@ -52,7 +52,7 @@ float Vektor::winkel(Vektor v){
 		float w = 0;
 		// Winkel = Skalarprodukt/(betrag(a)*betrag(b))
 		w = skalarprodukt(v) / (v.betrag() * this->betrag());
-		//w = (360/(2*PI)) * w;
+		w = (360/(2*PI)) * acos(w);
 		cout << "Winkel zwischen den Vektoren: " << w << " Grad" << endl;
 		return w;
 	}

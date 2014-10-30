@@ -1,4 +1,4 @@
-﻿Der Buildvorgang wurde am 27.10.2014 11:12:46 gestartet.
+﻿Der Buildvorgang wurde am 27.10.2014 16:22:32 gestartet.
      1>Projekt "C:\Users\Tom\Documents\My Dropbox\HS Mannheim\NAC\NAC-Uebungen\NAC\Übung2\Übung2.vcxproj" auf Knoten "2", Build Ziel(e).
      1>ClCompile:
          C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Vektor.cpp
@@ -15,4 +15,4 @@
 
 Build erfolgreich.
 
-Verstrichene Zeit 00:00:00.89
+Verstrichene Zeit 00:00:05.46
